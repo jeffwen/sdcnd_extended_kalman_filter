@@ -2,10 +2,10 @@
 
 [//]: # (Image References)
 
-[dataset1]: ./etc/dataset1 "Original dataset"
-[dataset2]: ./etc/dataset2 "Reversed dataset"
-[lidar_only]: ./etc/lidar_only "Lidar only"
-[radar_only]: ./etc/radar_only "Radar only"
+[dataset1]: ./etc/dataset1.png "Original dataset"
+[dataset2]: ./etc/dataset2.png "Reversed dataset"
+[lidar_only]: ./etc/lidar_only.png "Lidar only"
+[radar_only]: ./etc/radar_only.png "Radar only"
 
 In this project, we use an extended kalman filter to predict the location and velocity of a simulated bicycle that is traveling around the vehicle. The measurement data comes from lidar and radar sensors with the main algorithm is implemented in C++.
 
