@@ -29,7 +29,7 @@ ide_profiles/Eclipse/
 ide_profiles/README*
 
 #installation files
-*.sh
+install-ubuntu.sh
 
 # docs
 /docs

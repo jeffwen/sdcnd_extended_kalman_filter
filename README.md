@@ -1,3 +1,47 @@
 ## Extended Kalman Filter
 
-Work in progress! Will update soon...
+[//]: # (Image References)
+
+[dataset1]: ./etc/dataset1 "Original dataset"
+[dataset2]: ./etc/dataset2 "Reversed dataset"
+[lidar_only]: ./etc/lidar_only "Lidar only"
+[radar_only]: ./etc/radar_only "Radar only"
+
+In this project, we use an extended kalman filter to predict the location and velocity of a simulated bicycle that is traveling around the vehicle. The measurement data comes from lidar and radar sensors with the main algorithm is implemented in C++.
+
+### Example of Predicted location
+In the screenshots below, the green triangles represent the predicted location, the red circles are from the laser sensor, and the blue markers are from the radar sensor. We measure the accuracy of the algorithm by calculating the RMSE of the `x, y` positions and the velocity along the `x, y` axis. 
+
+![alt text][dataset1]
+
+* The original dataset starting with lidar measurement 
+
+![alt text][dataset2]
+
+* Reverse of the original dataset starting with radar measurement
+
+If we just use one or the other of the sensor measurements to update the algorithm we can start to see what each sensor is better.
+
+![alt text][lidar_only]
+
+* The original dataset starting with lidar measurement and only using the lidar measurements to update to algorithm. We can see that compared to using both sources of sensor data the overall algorithm performs worse. 
+
+![alt text][radar_only]
+
+* The original dataset starting with lidar measurement and only using the radar measurements to update to algorithm. Compared to using only the lidar data, the radar only updated algorithm is worse at localizing the positon (higher RMSE for `x` and `y`).
+
+### Compile and Build
+In order to compile and build this project, make sure that the following dependencies are met.
+
+* `cmake`:
+  * For Mac make sure that `cmake` is at least version 3.5
+* `make`:
+  * For Mac make sure that `make` is at least version 4.1
+* `gcc/g++`:
+  * For Mac make sure that `gcc/g++` is at least version 5.4
+* `uWebSocketIO`
+  * From the project directory run `install-mac.sh`, which should be linked to the necessary `cmakepatch.txt` file
+  * In order to run the above shell script, `homebrew` should also be installed
+
+
+
