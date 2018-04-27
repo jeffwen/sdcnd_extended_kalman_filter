@@ -7,7 +7,7 @@
 [lidar_only]: ./etc/lidar_only.png "Lidar only"
 [radar_only]: ./etc/radar_only.png "Radar only"
 
-In this project, we use an extended kalman filter to predict the location and velocity of a simulated bicycle that is traveling around the vehicle. The measurement data comes from lidar and radar sensors with the main algorithm is implemented in C++.
+In this project, we use an extended kalman filter to predict the location and velocity of a simulated bicycle that is traveling around the vehicle. The measurement data comes from lidar and radar sensors with the main algorithm implemented in C++.
 
 ### Example of Predicted location
 In the screenshots below, the green triangles represent the predicted location, the red circles are from the laser sensor, and the blue markers are from the radar sensor. We measure the accuracy of the algorithm by calculating the RMSE of the `x, y` positions and the velocity along the `x, y` axis. 
